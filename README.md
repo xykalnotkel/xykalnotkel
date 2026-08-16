@@ -1,16 +1,22 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**xykalnotkel/xykalnotkel** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img src="./assets/logo-animated.gif" width="220">
 
-Here are some ideas to get you started:
+<img
+  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&pause=1000&color=E53935&center=true&vCenter=true&width=650&lines=Welcome+to+my+GitHub;Game+%26+Cloud+Enthusiast;Building+Something+Awesome"
+  alt="Typing animation"
+/>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Hi, I'm NAMA 👋
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=radical&hide_border=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=USERNAME&layout=compact&theme=radical&hide_border=true)
+
+### Tech Stack
+
+![JavaScript](https://img.shields.io/badge/JavaScript-151515?style=for-the-badge&logo=javascript)
+![Python](https://img.shields.io/badge/Python-151515?style=for-the-badge&logo=python)
+![Git](https://img.shields.io/badge/Git-151515?style=for-the-badge&logo=git)
+
+</div>
