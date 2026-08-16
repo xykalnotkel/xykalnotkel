@@ -22,6 +22,17 @@
   </p>
 
   <img src="https://komarev.com/ghpvc/?username=xykalnotkel&style=flat-square&color=6f4e91&label=PROFILE+ORBIT" alt="Profile views" />
+
+  <p>
+    <sub>🎬 <strong>ABSOLUTE CINEMA</strong> — <em>Every frame is intentional. Every interaction is a scene.</em> &nbsp;•&nbsp; XySpace Cinematic Universe • EST 2024</sub>
+  </p>
+</div>
+
+<div align="center">
+
+![ABSOLUTE CINEMA](https://img.shields.io/badge/ABSOLUTE_CINEMA-%E2%97%86_XySpace-0d0c12?style=for-the-badge&labelColor=493465&color=a78bda)
+![CINEMATIC UNIVERSE](https://img.shields.io/badge/CINEMATIC_UNIVERSE-ON_AIR-17131e?style=for-the-badge&logo=appletv&logoColor=c4b5dc)
+
 </div>
 
 <img src="./assets/xyspace-orbit-divider.svg" width="100%" alt="XySpace orbit divider" />
@@ -37,25 +48,31 @@ Base      : Indonesia
 Mission   : Turn useful ideas into clear, playful, and accessible products.
 ```
 
-I build **XySpace** as a creative technology space for experimenting with applications, web experiences, game-inspired interfaces, AI-assisted workflows, and cloud-based ideas. I enjoy combining **function, visual identity, and playful interaction** instead of treating development and design as separate worlds.
+I build **XySpace** as a *cinematic technology universe* — where applications, web experiences, game-inspired interfaces, AI workflows & cloud ideas are directed like scenes. I enjoy combining **function, visual identity, and playful interaction** instead of treating development and design as separate worlds.
 
-> **Build with purpose. Experiment with curiosity. Ship with care.**
+> **🎬 Build with purpose. Experiment with curiosity. Ship with care.** — *An absolute cinema of useful ideas.*
 
-## `◇` Development Orbit
+<div align="center">
+  
+  `DIRECTED BY HAEKAL` • `PRODUCED BY XYSPACE` • `CINEMATOGRAPHY: CODE & PIXELS` • `SOUNDTRACK: KEYSTROKES`
+
+</div>
+
+## `◇` Development Orbit — *Three Acts*
 
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h3>◉ Applications</h3>
-      <p>Turning ideas into practical application concepts, prototypes, and user-friendly digital experiences.</p>
+      <h3>◉ ACT I — Applications</h3>
+      <p>Turning ideas into practical application concepts, prototypes, and user-friendly digital experiences. <em>The protagonist.</em></p>
     </td>
     <td width="33%" valign="top">
-      <h3>◌ Creative Web</h3>
-      <p>Responsive websites, portfolio experiences, visual systems, motion concepts, and modern interfaces.</p>
+      <h3>◌ ACT II — Creative Web</h3>
+      <p>Responsive websites, portfolio experiences, visual systems, motion & modern interfaces. <em>The world-building.</em></p>
     </td>
     <td width="33%" valign="top">
-      <h3>✦ Playful Tech</h3>
-      <p>Game experiments, interactive visuals, AI tools, cloud exploration, and unusual product ideas.</p>
+      <h3>✦ ACT III — Playful Tech</h3>
+      <p>Game experiments, interactive visuals, AI tools, cloud exploration & unusual product ideas. <em>The plot twist.</em></p>
     </td>
   </tr>
 </table>
@@ -73,13 +90,15 @@ I build **XySpace** as a creative technology space for experimenting with applic
 
 </div>
 
-## `✦` Current Mission
+## `✦` Current Mission — *Now Showing*
 
-- Developing the identity and digital ecosystem of **XySpace**.
-- Learning through practical application and web experiments.
-- Exploring game-inspired interaction without sacrificing usability.
-- Using AI as a creative assistant—not a replacement for thoughtful decisions.
-- Building a portfolio of work that feels useful, distinctive, and honest.
+> “Purple is not a color. It’s a feeling. It’s a universe.”
+
+- 🎬 **Directing the XySpace cinematic universe** — identity + digital ecosystem, frame by frame.
+- 🧪 **Learning by shipping** — practical app & web experiments, not endless trailers.
+- 🎮 **Game-inspired interaction** that stays usable — cinema without motion sickness.
+- 🤖 **AI as co-director** — it accelerates, I decide.
+- 📼 **Building a portfolio that feels useful, distinctive, and honest** — no filler scenes.
 
 ## `◎` GitHub Insights
 
