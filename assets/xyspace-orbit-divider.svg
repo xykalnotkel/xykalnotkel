@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="86" viewBox="0 0 1200 86" role="img" aria-label="XySpace orbit divider">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#221a2d" stop-opacity="0"/>
+      <stop offset=".28" stop-color="#60448a"/>
+      <stop offset=".5" stop-color="#c4b5dc"/>
+      <stop offset=".72" stop-color="#60448a"/>
+      <stop offset="1" stop-color="#221a2d" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M60 43H1140" stroke="url(#g)" stroke-width="1.4" opacity=".72"/>
+  <ellipse cx="600" cy="43" rx="84" ry="22" fill="none" stroke="#6c4b96" opacity=".75" transform="rotate(-8 600 43)"/>
+  <circle cx="600" cy="43" r="8" fill="#f5f3f8" stroke="#6c4b96" stroke-width="3"/>
+  <circle cx="516" cy="43" r="4" fill="#a78bda">
+    <animateTransform attributeName="transform" type="rotate" from="0 600 43" to="360 600 43" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="315" cy="43" r="2.5" fill="#fff" opacity=".5">
+    <animate attributeName="cx" values="315;335;315" dur="4.6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".25;.9;.25" dur="2.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="892" cy="43" r="2.5" fill="#a78bda" opacity=".65">
+    <animate attributeName="cx" values="892;872;892" dur="5.4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

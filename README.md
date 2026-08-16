@@ -1,22 +1,130 @@
+<!--
+  XySpace GitHub Profile — Haekal Saputra
+  Designed in a restrained purple / black / white visual system.
+-->
+
+<div align="center">
+  <img src="./assets/xyspace-header.gif" width="100%" alt="Haekal Saputra — XySpace animated header" />
+
+  <br />
+
+  <img src="./assets/xyspace-typing.svg" width="760" alt="Creative Technologist and App Developer" />
+
+  <p>
+    <a href="https://portofolio.haekal.web.id"><img src="https://img.shields.io/badge/PORTFOLIO-17131e?style=for-the-badge&logo=googlechrome&logoColor=ffffff" alt="Portfolio" /></a>
+    <a href="https://bio.xykel.my.id"><img src="https://img.shields.io/badge/BIO_PAGE-493465?style=for-the-badge&logo=linktree&logoColor=ffffff" alt="Bio page" /></a>
+    <a href="mailto:haekalsaputra01h@gmail.com"><img src="https://img.shields.io/badge/EMAIL-17131e?style=for-the-badge&logo=gmail&logoColor=ffffff" alt="Email" /></a>
+    <a href="https://wa.me/6283116632566"><img src="https://img.shields.io/badge/WHATSAPP-493465?style=for-the-badge&logo=whatsapp&logoColor=ffffff" alt="WhatsApp" /></a>
+    <a href="https://www.tiktok.com/@xyy.k4l"><img src="https://img.shields.io/badge/TIKTOK-17131e?style=for-the-badge&logo=tiktok&logoColor=ffffff" alt="TikTok" /></a>
+  </p>
+
+  <img src="https://komarev.com/ghpvc/?username=xykalnotkel&style=flat-square&color=6f4e91&label=PROFILE+ORBIT" alt="Profile views" />
+</div>
+
+<img src="./assets/xyspace-orbit-divider.svg" width="100%" alt="XySpace orbit divider" />
+
+## `◈` About Haekal
+
+```text
+Name      : Haekal Saputra
+Company   : XySpace
+Focus     : Application Development · Creative Web · Game Experiments
+Exploring : AI-assisted tools · Cloud workflows · Digital product design
+Base      : Indonesia
+Mission   : Turn useful ideas into clear, playful, and accessible products.
+```
+
+I build **XySpace** as a creative technology space for experimenting with applications, web experiences, game-inspired interfaces, AI-assisted workflows, and cloud-based ideas. I enjoy combining **function, visual identity, and playful interaction** instead of treating development and design as separate worlds.
+
+> **Build with purpose. Experiment with curiosity. Ship with care.**
+
+## `◇` Development Orbit
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>◉ Applications</h3>
+      <p>Turning ideas into practical application concepts, prototypes, and user-friendly digital experiences.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3>◌ Creative Web</h3>
+      <p>Responsive websites, portfolio experiences, visual systems, motion concepts, and modern interfaces.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3>✦ Playful Tech</h3>
+      <p>Game experiments, interactive visuals, AI tools, cloud exploration, and unusual product ideas.</p>
+    </td>
+  </tr>
+</table>
+
 <div align="center">
 
-<img src="./assets/logo-animated.gif" width="220">
+### Areas I Work With & Explore
 
-<img
-  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&pause=1000&color=E53935&center=true&vCenter=true&width=650&lines=Welcome+to+my+GitHub;Game+%26+Cloud+Enthusiast;Building+Something+Awesome"
-  alt="Typing animation"
-/>
+![App Development](https://img.shields.io/badge/App_Development-17131e?style=for-the-badge&logo=androidstudio&logoColor=c4b5dc)
+![Web Development](https://img.shields.io/badge/Web_Development-493465?style=for-the-badge&logo=googlechrome&logoColor=ffffff)
+![Game Experiments](https://img.shields.io/badge/Game_Experiments-17131e?style=for-the-badge&logo=unity&logoColor=c4b5dc)
+![AI Tools](https://img.shields.io/badge/AI_Tools-493465?style=for-the-badge&logo=openai&logoColor=ffffff)
+![Cloud](https://img.shields.io/badge/Cloud_Exploration-17131e?style=for-the-badge&logo=icloud&logoColor=c4b5dc)
+![Design](https://img.shields.io/badge/Digital_Design-493465?style=for-the-badge&logo=figma&logoColor=ffffff)
 
-## Hi, I'm NAMA 👋
+</div>
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=radical&hide_border=true)
+## `✦` Current Mission
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=USERNAME&layout=compact&theme=radical&hide_border=true)
+- Developing the identity and digital ecosystem of **XySpace**.
+- Learning through practical application and web experiments.
+- Exploring game-inspired interaction without sacrificing usability.
+- Using AI as a creative assistant—not a replacement for thoughtful decisions.
+- Building a portfolio of work that feels useful, distinctive, and honest.
 
-### Tech Stack
+## `◎` GitHub Insights
 
-![JavaScript](https://img.shields.io/badge/JavaScript-151515?style=for-the-badge&logo=javascript)
-![Python](https://img.shields.io/badge/Python-151515?style=for-the-badge&logo=python)
-![Git](https://img.shields.io/badge/Git-151515?style=for-the-badge&logo=git)
+<div align="center">
+  <img height="176" src="https://github-readme-stats.vercel.app/api?username=xykalnotkel&show_icons=true&rank_icon=github&hide_border=true&bg_color=0d0c12&title_color=a78bda&icon_color=c4b5dc&text_color=f5f3f8" alt="Haekal's GitHub statistics" />
+  <img height="176" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xykalnotkel&layout=compact&langs_count=8&hide_border=true&bg_color=0d0c12&title_color=a78bda&text_color=f5f3f8" alt="Most used languages" />
+</div>
 
+<br />
+
+<div align="center">
+  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=xykalnotkel&bg_color=0d0c12&color=c4b5dc&line=76559c&point=f5f3f8&area=true&area_color=493465&hide_border=true&custom_title=Haekal%27s%20Development%20Orbit" alt="GitHub activity graph" />
+</div>
+
+## `⌁` Contribution Journey
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/xykalnotkel/xykalnotkel/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/xykalnotkel/xykalnotkel/output/github-snake.svg" />
+    <img width="100%" src="https://raw.githubusercontent.com/xykalnotkel/xykalnotkel/output/github-snake-dark.svg" alt="Animated contribution snake" />
+  </picture>
+</div>
+
+## `◈` XySpace Principles
+
+| Principle | Meaning |
+|---|---|
+| **Useful first** | A visual idea should still solve a real problem. |
+| **Playful, not confusing** | Interaction can feel fun while remaining understandable. |
+| **Learn by building** | Small working experiments teach more than endless planning. |
+| **Human-directed AI** | AI accelerates exploration; judgment and responsibility stay human. |
+| **Keep evolving** | XySpace is a space for continuous iteration and discovery. |
+
+<img src="./assets/xyspace-orbit-divider.svg" width="100%" alt="XySpace orbit divider" />
+
+<div align="center">
+  <a href="https://portofolio.haekal.web.id"><strong>Portfolio</strong></a>
+  &nbsp;•&nbsp;
+  <a href="https://bio.xykel.my.id"><strong>Bio</strong></a>
+  &nbsp;•&nbsp;
+  <a href="mailto:haekalsaputra01h@gmail.com"><strong>Email</strong></a>
+  &nbsp;•&nbsp;
+  <a href="https://wa.me/6283116632566"><strong>WhatsApp</strong></a>
+  &nbsp;•&nbsp;
+  <a href="https://www.tiktok.com/@xyy.k4l"><strong>TikTok</strong></a>
+
+  <br /><br />
+
+  <sub>Designed for <strong>Haekal Saputra</strong> · Building <strong>XySpace</strong> from Indonesia.</sub>
 </div>
