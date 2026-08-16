@@ -4,11 +4,14 @@
 -->
 
 <div align="center">
-  <img src="./assets/xyspace-header.gif" width="100%" alt="Haekal Saputra — XySpace animated header" />
+  <picture>
+    <source srcset="./assets/xyspace-header-animated.webp" type="image/webp">
+    <img src="./assets/xyspace-header.gif" width="100%" alt="Haekal Saputra — XySpace animated header" loading="eager" decoding="async" />
+  </picture>
 
   <br />
 
-  <img src="./assets/xyspace-typing.svg" width="760" alt="Creative Technologist and App Developer" />
+  <img src="./assets/xyspace-typing.svg" width="760" alt="Creative Technologist and App Developer" loading="lazy" decoding="async" />
 
   <p>
     <a href="https://portofolio.haekal.web.id"><img src="https://img.shields.io/badge/PORTFOLIO-17131e?style=for-the-badge&logo=googlechrome&logoColor=ffffff" alt="Portfolio" /></a>

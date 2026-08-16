@@ -119,6 +119,8 @@ def draw_star(draw, x, y, r, fill):
 base = make_base()
 base_rgb = base.convert("RGB")
 base_rgb.save(ASSETS / "xyspace-header.png", "PNG", optimize=True)
+# WebP — fast load (91% smaller), modern browsers
+base_rgb.save(ASSETS / "xyspace-header.webp", "WEBP", quality=88, method=6)
 
 # Avatar/app icon derived from the AI emblem, with safe inset and final sharpening.
 em = Image.open(EMBLEM).convert("RGB")
@@ -126,6 +128,7 @@ em = ImageEnhance.Contrast(em).enhance(1.035)
 em = em.resize((1024, 1024), Image.Resampling.LANCZOS)
 em = em.filter(ImageFilter.UnsharpMask(radius=1.2, percent=55, threshold=4))
 em.save(ASSETS / "xyspace-avatar.png", "PNG", optimize=True, dpi=(300, 300))
+em.save(ASSETS / "xyspace-avatar.webp", "WEBP", quality=88, method=6)
 
 # Animated hero: tiny drifting particles, twinkling stars, logo-orbit dots and a soft sweep.
 random.seed(42)
@@ -186,6 +189,48 @@ frames[0].save(
     optimize=True,
     disposal=2,
 )
+# Animated WebP — ~80% smaller than GIF, same animation
+try:
+    # Rebuild RGB frames for WebP (avoid quantized palette)
+    webp_frames = []
+    for i in range(count):
+        t = i / count
+        frame = base.copy()
+        fx = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(fx)
+        for p in particles:
+            xx = p["x"] + math.sin(math.tau * t * p["speed"] + p["phase"]) * 7
+            yy = p["y"] + math.cos(math.tau * t * .72 + p["phase"]) * 4
+            pulse = .55 + .45 * math.sin(math.tau * t + p["phase"]) ** 2
+            color = (176, 145, 222, int(35 + 90*pulse)) if p["purple"] else (255, 255, 255, int(28 + 95*pulse))
+            r = p["r"]
+            d.ellipse((xx-r, yy-r, xx+r, yy+r), fill=color)
+        for idx, (sx, sy, sr) in enumerate([(327, 55, 7), (870, 85, 5), (1028, 315, 6), (746, 42, 4)]):
+            pulse = .35 + .65 * (math.sin(math.tau*t + idx*1.3) ** 2)
+            draw_star(d, sx, sy, sr*(.7+.3*pulse), (238, 229, 250, int(48 + 150*pulse)))
+        cx, cy = 172, 200
+        for j, ang0 in enumerate((0, math.pi)):
+            ang = math.tau*t + ang0
+            ox = cx + math.cos(ang)*136
+            oy = cy + math.sin(ang)*114
+            rr = 3 if j == 0 else 2
+            d.ellipse((ox-rr, oy-rr, ox+rr, oy+rr), fill=(180, 150, 224, 180 if j == 0 else 115))
+        sweep_x = int(20 + t * 350)
+        d.polygon([(sweep_x, 82), (sweep_x+20, 82), (sweep_x-72, 320), (sweep_x-92, 320)], fill=(255, 255, 255, 13))
+        fx = fx.filter(ImageFilter.GaussianBlur(.25))
+        webp_frame = Image.alpha_composite(frame, fx).convert("RGB")
+        webp_frames.append(webp_frame)
+    webp_frames[0].save(
+        ASSETS / "xyspace-header-animated.webp",
+        save_all=True,
+        append_images=webp_frames[1:],
+        duration=90,
+        loop=0,
+        quality=82,
+        method=4,
+    )
+except Exception as e:
+    print(f"WebP animated skipped: {e}")
 
 # Social preview uses the same art direction in GitHub's preview proportion.
 SW, SH = 1280, 640
@@ -203,8 +248,16 @@ for yy in range(SH):
         od.line((0,yy,SW,yy), fill=(9,9,14,alpha))
 social_bg = Image.alpha_composite(social_bg.convert('RGBA'),ov).convert('RGB')
 social_bg.save(ASSETS / "xyspace-social-preview.png", "PNG", optimize=True)
+social_bg.save(ASSETS / "xyspace-social-preview.webp", "WEBP", quality=85, method=6)
+
+# Also convert source AI assets to WebP for faster dev (keeps PNG as fallback)
+for src_name in ["xyspace_cosmic_scene_ai.png", "xyspace_emblem_ai.png"]:
+    src = ASSETS / src_name
+    if src.exists():
+        Image.open(src).convert("RGB").save(src.with_suffix(".webp"), "WEBP", quality=82, method=6)
 
 print("Generated:")
-for name in ["xyspace-header.png", "xyspace-header.gif", "xyspace-avatar.png", "xyspace-social-preview.png"]:
+for name in ["xyspace-header.png", "xyspace-header.webp", "xyspace-header.gif", "xyspace-header-animated.webp", "xyspace-avatar.png", "xyspace-avatar.webp", "xyspace-social-preview.png", "xyspace-social-preview.webp"]:
     p = ASSETS / name
-    print(f"- {p} ({p.stat().st_size:,} bytes)")
+    if p.exists():
+        print(f"- {p} ({p.stat().st_size:,} bytes)")
