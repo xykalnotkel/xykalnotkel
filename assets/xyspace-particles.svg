@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @keyframes drift1{0%{transform:translateY(0) translateX(0)}25%{transform:translateY(-14px) translateX(8px)}50%{transform:translateY(-5px) translateX(-10px)}75%{transform:translateY(-18px) translateX(4px)}100%{transform:translateY(0) translateX(0)}}
+    @keyframes drift2{0%{transform:translateY(0) translateX(0)}25%{transform:translateY(10px) translateX(-7px)}50%{transform:translateY(-12px) translateX(9px)}75%{transform:translateY(7px) translateX(-4px)}100%{transform:translateY(0) translateX(0)}}
+    @keyframes drift3{0%{transform:translateY(0) translateX(0) scale(1)}50%{transform:translateY(-9px) translateX(5px) scale(1.4)}100%{transform:translateY(0) translateX(0) scale(1)}}
+    @keyframes pulse{0%{opacity:0.15}50%{opacity:0.55}100%{opacity:0.15}}
+    @keyframes morphBlob{0%{rx:4;ry:3}25%{rx:5;ry:2.5}50%{rx:3;ry:5}75%{rx:4.5;ry:3.5}100%{rx:4;ry:3}}
+    @keyframes morphBlob2{0%{rx:6;ry:4}25%{rx:4;ry:6}50%{rx:7;ry:3}75%{rx:5;ry:5}100%{rx:6;ry:4}}
+    .d1{animation:drift1 9s ease-in-out infinite}
+    .d2{animation:drift2 11s ease-in-out infinite}
+    .d3{animation:drift3 7s ease-in-out infinite}
+    .pu{animation:pulse 5s ease-in-out infinite}
+    .mb{animation:morphBlob 6s ease-in-out infinite}
+    .mb2{animation:morphBlob2 8s ease-in-out infinite}
+  </style>
+  <defs>
+    <!-- Soft radial glow for blobs -->
+    <radialGradient id="pg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bda" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#705298" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0d0c12" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pg2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c4b5dc" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#493465" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0d0c12" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pg3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5f3f8" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#a78bda" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0d0c12" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Soft morphing blob particles -->
+  <g filter="url(#softGlow)">
+    <!-- Large soft blobs -->
+    <ellipse class="d1 mb" cx="90" cy="52" rx="4" ry="3" fill="url(#pg)" opacity="0.5"/>
+    <ellipse class="d2 mb2" cx="250" cy="130" rx="6" ry="4" fill="url(#pg)" opacity="0.35"/>
+    <ellipse class="d3 mb" cx="420" cy="70" rx="5" ry="3.5" fill="url(#pg2)" opacity="0.4"/>
+    <ellipse class="d1 mb2" cx="580" cy="310" rx="7" ry="4" fill="url(#pg)" opacity="0.3"/>
+    <ellipse class="d2 mb" cx="750" cy="85" rx="4" ry="3" fill="url(#pg2)" opacity="0.45"/>
+    <ellipse class="d3 mb2" cx="930" cy="340" rx="6" ry="3.5" fill="url(#pg)" opacity="0.35"/>
+    <ellipse class="d1 mb" cx="1100" cy="60" rx="5" ry="3" fill="url(#pg2)" opacity="0.4"/>
+    <ellipse class="d2 mb2" cx="160" cy="355" rx="4" ry="3" fill="url(#pg)" opacity="0.3"/>
+
+    <!-- Medium soft blobs -->
+    <ellipse class="d3 mb" cx="340" cy="285" rx="3" ry="2" fill="url(#pg2)" opacity="0.45"/>
+    <ellipse class="d1 mb2" cx="500" cy="95" rx="3.5" ry="2.5" fill="url(#pg)" opacity="0.4"/>
+    <ellipse class="d2 mb" cx="680" cy="270" rx="3" ry="2" fill="url(#pg2)" opacity="0.5"/>
+    <ellipse class="d3 mb2" cx="860" cy="165" rx="4" ry="2.5" fill="url(#pg)" opacity="0.35"/>
+    <ellipse class="d1 mb" cx="1050" cy="290" rx="3" ry="2" fill="url(#pg2)" opacity="0.4"/>
+    <ellipse class="d2 mb2" cx="70" cy="210" rx="3.5" ry="2" fill="url(#pg)" opacity="0.3"/>
+
+    <!-- Tiny soft dots (metal dust) -->
+    <ellipse class="pu" cx="190" cy="170" rx="1.5" ry="1" fill="#a78bda" opacity="0.4"/>
+    <ellipse class="pu" cx="470" cy="190" rx="1.5" ry="1" fill="#c4b5dc" opacity="0.35"/>
+    <ellipse class="pu" cx="640" cy="380" rx="1" ry="1.5" fill="#a78bda" opacity="0.3"/>
+    <ellipse class="pu" cx="810" cy="230" rx="1.5" ry="1" fill="#f5f3f8" opacity="0.25"/>
+    <ellipse class="pu" cx="1150" cy="155" rx="1" ry="1.5" fill="#c4b5dc" opacity="0.35"/>
+    <ellipse class="pu" cx="310" cy="40" rx="1" ry="1" fill="#a78bda" opacity="0.3"/>
+    <ellipse class="pu" cx="990" cy="140" rx="1.5" ry="1" fill="#f5f3f8" opacity="0.2"/>
+    <ellipse class="pu" cx="550" cy="55" rx="1" ry="1" fill="#c4b5dc" opacity="0.35"/>
+
+    <!-- Orbit trail dots near emblem area -->
+    <ellipse class="d3" cx="175" cy="198" rx="2.5" ry="2" fill="url(#pg2)" opacity="0.5"/>
+    <ellipse class="d1" cx="180" cy="192" rx="1.5" ry="1" fill="url(#pg3)" opacity="0.4"/>
+  </g>
+</svg>

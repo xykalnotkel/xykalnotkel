@@ -1,1 +1,5 @@
 Pillow>=10.0
+
+# Build assets script requires Python >=3.10 (match-case syntax)
+# Install:  pip install -r requirements.txt
+# Run:      python build_assets.py

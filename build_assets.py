@@ -2,6 +2,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 from pathlib import Path
 import math
 import random
+import sys
 
 ROOT = Path(__file__).parent
 ASSETS = ROOT / "assets"
@@ -17,9 +18,51 @@ WHITE = (246, 244, 250)
 MUTED = (198, 193, 208)
 INK = (10, 10, 15)
 
-FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-FONT_REG = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-FONT_MONO = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+
+# ── Font resolution: Linux → macOS → Windows → Pillow default ──────────────
+
+def _find_font(candidates: list[str]) -> str | None:
+    """Return the first existing font path, or None."""
+    for path in candidates:
+        if Path(path).is_file():
+            return path
+    return None
+
+
+FONT_BOLD = _find_font([
+    # Linux (Debian/Ubuntu)
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    # macOS (Homebrew or system)
+    "/Library/Fonts/DejaVuSans-Bold.ttf",
+    "/System/Library/Fonts/Helvetica.ttc",
+    # Windows
+    "C:/Windows/Fonts/dejavusans-bold.ttf",
+    "C:/Windows/Fonts/arialbd.ttf",
+])
+
+FONT_REG = _find_font([
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    "/Library/Fonts/DejaVuSans.ttf",
+    "/System/Library/Fonts/Helvetica.ttc",
+    "C:/Windows/Fonts/dejavusans.ttf",
+    "C:/Windows/Fonts/arial.ttf",
+])
+
+FONT_MONO = _find_font([
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
+    "/Library/Fonts/DejaVuSansMono.ttf",
+    "/System/Library/Fonts/SFNSMono.ttf",
+    "C:/Windows/Fonts/dejavusansmono.ttf",
+    "C:/Windows/Fonts/consola.ttf",
+])
+
+if not all([FONT_BOLD, FONT_REG, FONT_MONO]):
+    missing = []
+    if not FONT_BOLD:  missing.append("BOLD")
+    if not FONT_REG:   missing.append("REGULAR")
+    if not FONT_MONO:  missing.append("MONO")
+    print(f"⚠  Font fallback: using Pillow default for {', '.join(missing)}.")
+    print("   For best results, install DejaVu Sans or edit FONT_* paths.")
 
 
 def fit_cover(im, size):
@@ -84,11 +127,11 @@ def make_base():
 
     # Precise typography rendered outside the AI model.
     d = ImageDraw.Draw(base)
-    small = ImageFont.truetype(FONT_MONO, 15)
-    micro_bold = ImageFont.truetype(FONT_BOLD, 14)
-    name_font = ImageFont.truetype(FONT_BOLD, 49)
-    brand_font = ImageFont.truetype(FONT_BOLD, 26)
-    sub_font = ImageFont.truetype(FONT_REG, 16)
+    small = ImageFont.truetype(FONT_MONO, 15) if FONT_MONO else ImageFont.load_default()
+    micro_bold = ImageFont.truetype(FONT_BOLD, 14) if FONT_BOLD else ImageFont.load_default()
+    name_font = ImageFont.truetype(FONT_BOLD, 49) if FONT_BOLD else ImageFont.load_default()
+    brand_font = ImageFont.truetype(FONT_BOLD, 26) if FONT_BOLD else ImageFont.load_default()
+    sub_font = ImageFont.truetype(FONT_REG, 16) if FONT_REG else ImageFont.load_default()
 
     tx = 338
     d.rounded_rectangle((tx, 76, tx + 284, 108), radius=16, fill=(79, 52, 118, 190), outline=(168, 144, 211, 75), width=1)
@@ -260,4 +303,4 @@ print("Generated:")
 for name in ["xyspace-header.png", "xyspace-header.webp", "xyspace-header.gif", "xyspace-header-animated.webp", "xyspace-avatar.png", "xyspace-avatar.webp", "xyspace-social-preview.png", "xyspace-social-preview.webp"]:
     p = ASSETS / name
     if p.exists():
-        print(f"- {p} ({p.stat().st_size:,} bytes)")
+        print(f"  ✓ {p.name} ({p.stat().st_size:,} bytes)")

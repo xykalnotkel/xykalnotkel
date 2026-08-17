@@ -1,3 +1,33 @@
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+
+# OS
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Generated output (snake workflow)
+output/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
